@@ -9,8 +9,8 @@ export default function TodoApp() {
     <div className="todo-app">
       <h1>Todo List</h1>
       <AddTodo />
-      <TodoList />
       <VisibilityFilters />
+      <TodoList />
     </div>
   );
 }

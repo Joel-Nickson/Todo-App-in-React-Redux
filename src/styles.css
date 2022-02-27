@@ -1,5 +1,25 @@
+/** todo html **/
+body{
+  background-color: rgb(57, 177, 214);
+}
+ul{
+  padding-inline: 20px;
+}
+@media (min-width: 800px){
+  ul{
+    padding-inline: 40px;
+  }
+}
+
+/** todo app **/
 .todo-app {
   font-family: sans-serif;
+  background-color:rgb(127, 246, 255);
+  width:clamp(40%,500px,90%);
+  margin: 10rem auto;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 /** add todo **/
@@ -9,9 +29,11 @@
 
 /** todo list **/
 .todo-list {
-  margin-top: 1rem;
   text-align: left;
   list-style: none;
+  background-color: rgb(241, 241, 241);
+  padding: 2rem 3rem;
+  margin: 2rem auto 0 auto;
 }
 
 /** todo item **/
@@ -19,6 +41,7 @@
   font-family: monospace;
   cursor: pointer;
   line-height: 1.5;
+  font-size: xx-large;
 }
 .todo-item__text--completed {
   text-decoration: line-through;
@@ -26,6 +49,10 @@
 }
 
 /** visibility filters **/
+.visibility-filters{
+  margin-top: 1rem;
+  text-align: center;
+}
 .filter {
   padding: 0.3rem 0;
   margin: 0 0.3rem;
