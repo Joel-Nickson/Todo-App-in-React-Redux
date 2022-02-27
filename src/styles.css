@@ -33,7 +33,7 @@ ul{
   list-style: none;
   /* background-color: rgb(241, 241, 241); */
   padding: 1rem 2rem;
-  margin: 1 rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   border-radius: 5px;
 }
 
@@ -55,7 +55,7 @@ ul{
 }
 .todo-item__text--completed {
   text-decoration: line-through;
-  color: lightgray;
+  color: rgb(124, 124, 124);
 }
 .todo-list--removed{
   display: none;
