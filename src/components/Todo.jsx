@@ -4,22 +4,23 @@ import cx from "classnames";
 import { toggleTodo, removeTodo } from "../redux/actions";
 
 const Todo = ({ todo, toggleTodo, removeTodo }) => (
-  <li className={cx(
-    "todo-item",
-    todo && todo.display && "todo-list--removed"
-  )}>
-    {todo && todo.completed ? "👌" : "👋"}{" "}
-    <span
-      onClick={() => toggleTodo(todo.id)}
-      className={cx(
-        "todo-item__text",
-        todo && todo.completed && "todo-item__text--completed"
-      )}
-    >
-      {todo.content}
-    </span>
-    <button className="todo-btn" onClick={() => removeTodo(todo.id)} >delete</button>
-  </li>
+  <div className={cx(todo && todo.display && "todo-list--removed")}>
+    <li className="todo-item">
+      {todo && todo.completed ? "😌" : "😶"}{" "}
+      <span
+        className={cx(
+          "todo-item__text",
+          todo && todo.completed && "todo-item__text--completed"
+        )}
+      >
+        {todo.content}
+      </span>
+    </li>
+    <div className="todo-btns" >
+      <button className="todo-btn btn-1" onClick={() => toggleTodo(todo.id)} >mark</button>
+      <button className="todo-btn btn-2" onClick={() => removeTodo(todo.id)} >delete</button>
+    </div>
+  </div>
 );
 
 // const removeTodo = (id) => {
