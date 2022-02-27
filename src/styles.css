@@ -47,6 +47,12 @@ ul{
   text-decoration: line-through;
   color: lightgray;
 }
+.todo-list--removed{
+  display: none;
+}
+.todo-btn{
+  z-index: 100;
+}
 
 /** visibility filters **/
 .visibility-filters{

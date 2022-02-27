@@ -1,11 +1,11 @@
-import { ADD_TODO, TOGGLE_TODO } from "../actionTypes";
+import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from "../actionTypes";
 
 const initialState = {
   allIds: [],
   byIds: {}
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case ADD_TODO: {
       const { id, content } = action.payload;
@@ -16,7 +16,21 @@ export default function(state = initialState, action) {
           ...state.byIds,
           [id]: {
             content,
-            completed: false
+            completed: false,
+            display: false
+          }
+        }
+      };
+    }
+    case DELETE_TODO: {
+      const { id } = action.payload;
+      return {
+        ...state,
+        byIds: {
+          ...state.byIds,
+          [id]: {
+            ...state.byIds[id],
+            display: true
           }
         }
       };
